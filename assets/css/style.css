@@ -1,0 +1,143 @@
+:root {
+  --gray-dark: #1B1B1B;
+  --beige-light: #FFFDED;
+  --pink-dark: #D8B8AA;
+}
+
+@font-face {
+  font-family: 'Geist Light';
+  src: url('../fonts/geist-light-webfont.woff2') format('woff2'),
+       url('../fonts/geist-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Geist Ultra Light';
+  src: url('../fonts/geist-ultralight-webfont.woff2') format('woff2'),
+       url('../fonts/geist-ultralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* General styles */
+::-moz-selection {
+  color: var(--gray-dark);
+  background: var(--pink-dark);
+}
+
+::selection {
+  color: var(--gray-dark);
+  background: var(--pink-dark);
+}
+
+body {
+  background-color: var(--gray-dark);
+}
+
+main {
+  padding: .5rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li, header nav ul li button {
+  font-family: 'Geist Light', sans-serif;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+header nav ul li a, header nav ul li button {
+  color: var(--beige-light);
+  transition: color .2s ease-in-out;
+}
+
+header nav ul li a:hover, header nav ul li button:hover {
+  color: var(--pink-dark);
+}
+
+/* To prevent layout shift when changing the text to "copied" */
+header nav ul li button {
+  min-width: 3rem;
+  text-align: right;
+}
+
+article {
+  display: grid;
+}
+
+article p {
+  font-family: 'Geist Light', sans-serif;
+  font-size: 1.125rem;
+  line-height: 145%;
+  color: var(--beige-light);
+  margin-top: 12vh;
+}
+
+article h1 {
+  font-family: 'Geist Ultra Light', sans-serif;
+  text-transform: uppercase;
+  color: var(--beige-light);
+  justify-self: center;
+  position: absolute;
+  bottom: 0;
+  font-size: 12vw;
+}
+
+@media screen and (min-width: 810px) {
+  main {
+    padding: 3rem 4rem;
+  }
+  
+  article p {
+    max-width: 540px;
+    margin-top: 25vh;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  article p {
+    grid-column: 2;
+    justify-self: flex-end;
+  }
+
+  article h1 {
+    grid-column: span 2;
+  }
+}
