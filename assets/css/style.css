@@ -77,6 +77,7 @@ header nav ul li, header nav ul li button {
   font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: 0.25px;
+  font-weight: 300;
 }
 
 header nav ul li a, header nav ul li button {
@@ -104,6 +105,7 @@ article p {
   line-height: 145%;
   color: var(--beige-light);
   margin-top: 12vh;
+  font-weight: 300;
 }
 
 article h1 {
@@ -114,6 +116,7 @@ article h1 {
   position: absolute;
   bottom: 0;
   font-size: 12vw;
+  font-weight: 200;
 }
 
 @media screen and (min-width: 810px) {
